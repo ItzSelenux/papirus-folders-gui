@@ -11,7 +11,7 @@ papirus-folders-gui is a graphical user interface for papirus-folders, this prog
 - [Usage](#usage)
     - [Color Change](#color-change)
     - [Colors preview](#colors-preview)
-    - [Dark and Light theme, and Restore to Default](#dark-and-Light-theme,and-Restore-to-Default)
+    - [Dark and Light theme, and Restore to Default](#dark-and-light-theme-and-restore-to-default)
 
 ## papirus-folder installation
  You can download papirus folder on <a href=”url”>https://github.com/PapirusDevelopmentTeam/papirus-folders</a>
