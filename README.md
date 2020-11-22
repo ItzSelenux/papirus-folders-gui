@@ -1,7 +1,11 @@
 # papirus-folders-gui
 papirus-folders-gui is a graphical user interface for papirus-folders, this program change the folders color of Papirus
 
-Note: This project doesn't provide any folder icons
+Notes: This project doesn't provide any folder icons
+
+for this program to work it is necessary that you have installed papirus-folders-gui on your PC
+
+for this program to work it is necessary that you have installed zensu on your PC
 
 ## Table of contents
 
