@@ -2,6 +2,7 @@
 #include "ui_secdialog.h"
 #include "license.h"
 #include "help.h"
+#include "changelog.h"
 
 secDialog::secDialog(QWidget *parent) :
     QDialog(parent),
@@ -34,5 +35,7 @@ void secDialog::on_help_clicked()
 
 void secDialog::on_pushButton_clicked()
 {
-    close();
+    changelog changelog;
+    changelog.setModal(true);
+    changelog.exec();
 }

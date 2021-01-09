@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'license.ui'
 **
-** Created by: Qt User Interface Compiler version 5.15.1
+** Created by: Qt User Interface Compiler version 5.15.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,6 +10,7 @@
 #define UI_LICENSE_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QGridLayout>
@@ -33,6 +34,9 @@ public:
             license->setObjectName(QString::fromUtf8("license"));
         license->resize(402, 300);
         license->setMinimumSize(QSize(100, 100));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/colors.png"), QSize(), QIcon::Normal, QIcon::Off);
+        license->setWindowIcon(icon);
         gridLayout = new QGridLayout(license);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         textBrowser = new QTextBrowser(license);

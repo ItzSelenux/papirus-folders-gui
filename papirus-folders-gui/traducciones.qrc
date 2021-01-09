@@ -1,9 +1,5 @@
 <RCC>
     <qresource prefix="/">
-        <file>portuguese.qm</file>
-        <file>french.qm</file>
-        <file>espanish.qm</file>
-        <file>italiano.qm</file>
         <file>black.png</file>
         <file>blue.png</file>
         <file>bluegrey.png</file>

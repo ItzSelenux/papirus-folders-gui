@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'colors.ui'
 **
-** Created by: Qt User Interface Compiler version 5.15.1
+** Created by: Qt User Interface Compiler version 5.15.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -75,7 +75,7 @@ public:
             colors->setObjectName(QString::fromUtf8("colors"));
         colors->resize(686, 352);
         QIcon icon;
-        icon.addFile(QString::fromUtf8("../folder-green.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8(":/colors.png"), QSize(), QIcon::Normal, QIcon::Off);
         colors->setWindowIcon(icon);
         gridLayout = new QGridLayout(colors);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
@@ -101,13 +101,13 @@ public:
 
         label_6 = new QLabel(colors);
         label_6->setObjectName(QString::fromUtf8("label_6"));
-        label_6->setPixmap(QPixmap(QString::fromUtf8("../Documents/colors/brown.png")));
+        label_6->setPixmap(QPixmap(QString::fromUtf8(":/brown.png")));
 
         gridLayout->addWidget(label_6, 5, 0, 1, 1);
 
         label_10 = new QLabel(colors);
         label_10->setObjectName(QString::fromUtf8("label_10"));
-        label_10->setPixmap(QPixmap(QString::fromUtf8("../Documents/colors/grey.png")));
+        label_10->setPixmap(QPixmap(QString::fromUtf8(":/grey.png")));
 
         gridLayout->addWidget(label_10, 9, 0, 1, 1);
 
@@ -143,25 +143,25 @@ public:
 
         label_4 = new QLabel(colors);
         label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setPixmap(QPixmap(QString::fromUtf8("../Documents/colors/bluegrey.png")));
+        label_4->setPixmap(QPixmap(QString::fromUtf8(":/bluegrey.png")));
 
         gridLayout->addWidget(label_4, 3, 0, 1, 1);
 
         label_23 = new QLabel(colors);
         label_23->setObjectName(QString::fromUtf8("label_23"));
-        label_23->setPixmap(QPixmap(QString::fromUtf8("../Documents/colors/red.png")));
+        label_23->setPixmap(QPixmap(QString::fromUtf8(":/red.png")));
 
         gridLayout->addWidget(label_23, 7, 1, 1, 1);
 
         label_33 = new QLabel(colors);
         label_33->setObjectName(QString::fromUtf8("label_33"));
-        label_33->setPixmap(QPixmap(QString::fromUtf8("../Documents/colors/paleorange.png")));
+        label_33->setPixmap(QPixmap(QString::fromUtf8(":/paleorange.png")));
 
         gridLayout->addWidget(label_33, 5, 1, 1, 1);
 
         label_42 = new QLabel(colors);
         label_42->setObjectName(QString::fromUtf8("label_42"));
-        label_42->setPixmap(QPixmap(QString::fromUtf8("../Documents/colors/teal.png")));
+        label_42->setPixmap(QPixmap(QString::fromUtf8(":/teal.png")));
 
         gridLayout->addWidget(label_42, 9, 2, 1, 1);
 
@@ -172,13 +172,13 @@ public:
 
         label_29 = new QLabel(colors);
         label_29->setObjectName(QString::fromUtf8("label_29"));
-        label_29->setPixmap(QPixmap(QString::fromUtf8("../Documents/colors/breeze.png")));
+        label_29->setPixmap(QPixmap(QString::fromUtf8(":/breeze.png")));
 
         gridLayout->addWidget(label_29, 5, 2, 1, 1);
 
         label_27 = new QLabel(colors);
         label_27->setObjectName(QString::fromUtf8("label_27"));
-        label_27->setPixmap(QPixmap(QString::fromUtf8("../Documents/colors/indigo.png")));
+        label_27->setPixmap(QPixmap(QString::fromUtf8(":/indigo.png")));
 
         gridLayout->addWidget(label_27, 3, 3, 1, 1);
 
@@ -189,7 +189,7 @@ public:
 
         label_26 = new QLabel(colors);
         label_26->setObjectName(QString::fromUtf8("label_26"));
-        label_26->setPixmap(QPixmap(QString::fromUtf8("../Documents/colors/nordic.png")));
+        label_26->setPixmap(QPixmap(QString::fromUtf8(":/nordic.png")));
 
         gridLayout->addWidget(label_26, 5, 3, 1, 1);
 
@@ -200,7 +200,7 @@ public:
 
         label_17 = new QLabel(colors);
         label_17->setObjectName(QString::fromUtf8("label_17"));
-        label_17->setPixmap(QPixmap(QString::fromUtf8("../Documents/colors/orange.png")));
+        label_17->setPixmap(QPixmap(QString::fromUtf8(":/orange.png")));
 
         gridLayout->addWidget(label_17, 3, 1, 1, 1);
 
@@ -211,7 +211,7 @@ public:
 
         label_14 = new QLabel(colors);
         label_14->setObjectName(QString::fromUtf8("label_14"));
-        label_14->setPixmap(QPixmap(QString::fromUtf8("../Documents/colors/yaru.png")));
+        label_14->setPixmap(QPixmap(QString::fromUtf8(":/yaru.png")));
 
         gridLayout->addWidget(label_14, 1, 2, 1, 1);
 
@@ -222,13 +222,13 @@ public:
 
         label_2 = new QLabel(colors);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setPixmap(QPixmap(QString::fromUtf8("../Documents/colors/black.png")));
+        label_2->setPixmap(QPixmap(QString::fromUtf8(":/black.png")));
 
         gridLayout->addWidget(label_2, 1, 0, 1, 1);
 
         label_40 = new QLabel(colors);
         label_40->setObjectName(QString::fromUtf8("label_40"));
-        label_40->setPixmap(QPixmap(QString::fromUtf8("../Documents/colors/cyan.png")));
+        label_40->setPixmap(QPixmap(QString::fromUtf8(":/cyan.png")));
 
         gridLayout->addWidget(label_40, 7, 2, 1, 1);
 
@@ -244,7 +244,7 @@ public:
 
         label_21 = new QLabel(colors);
         label_21->setObjectName(QString::fromUtf8("label_21"));
-        label_21->setPixmap(QPixmap(QString::fromUtf8("../Documents/colors/pink.png")));
+        label_21->setPixmap(QPixmap(QString::fromUtf8(":/pink.png")));
 
         gridLayout->addWidget(label_21, 9, 3, 1, 1);
 
@@ -255,37 +255,37 @@ public:
 
         label_28 = new QLabel(colors);
         label_28->setObjectName(QString::fromUtf8("label_28"));
-        label_28->setPixmap(QPixmap(QString::fromUtf8("../Documents/colors/palebrown.png")));
+        label_28->setPixmap(QPixmap(QString::fromUtf8(":/palebrown.png")));
 
         gridLayout->addWidget(label_28, 7, 3, 1, 1);
 
         label_41 = new QLabel(colors);
         label_41->setObjectName(QString::fromUtf8("label_41"));
-        label_41->setPixmap(QPixmap(QString::fromUtf8("../Documents/colors/white.png")));
+        label_41->setPixmap(QPixmap(QString::fromUtf8(":/white.png")));
 
         gridLayout->addWidget(label_41, 1, 4, 1, 1);
 
         label_16 = new QLabel(colors);
         label_16->setObjectName(QString::fromUtf8("label_16"));
-        label_16->setPixmap(QPixmap(QString::fromUtf8("../Documents/colors/blue.png")));
+        label_16->setPixmap(QPixmap(QString::fromUtf8(":/blue.png")));
 
         gridLayout->addWidget(label_16, 3, 2, 1, 1);
 
         label_15 = new QLabel(colors);
         label_15->setObjectName(QString::fromUtf8("label_15"));
-        label_15->setPixmap(QPixmap(QString::fromUtf8("../Documents/colors/violet.png")));
+        label_15->setPixmap(QPixmap(QString::fromUtf8(":/violet.png")));
 
         gridLayout->addWidget(label_15, 9, 1, 1, 1);
 
         label_12 = new QLabel(colors);
         label_12->setObjectName(QString::fromUtf8("label_12"));
-        label_12->setPixmap(QPixmap(QString::fromUtf8("../Documents/colors/magenta.png")));
+        label_12->setPixmap(QPixmap(QString::fromUtf8(":/magenta.png")));
 
         gridLayout->addWidget(label_12, 1, 1, 1, 1);
 
         label_35 = new QLabel(colors);
         label_35->setObjectName(QString::fromUtf8("label_35"));
-        label_35->setPixmap(QPixmap(QString::fromUtf8("../Documents/colors/green.png")));
+        label_35->setPixmap(QPixmap(QString::fromUtf8(":/green.png")));
 
         gridLayout->addWidget(label_35, 1, 3, 1, 1);
 
@@ -296,7 +296,7 @@ public:
 
         label_46 = new QLabel(colors);
         label_46->setObjectName(QString::fromUtf8("label_46"));
-        label_46->setPixmap(QPixmap(QString::fromUtf8("../Documents/colors/yellow.png")));
+        label_46->setPixmap(QPixmap(QString::fromUtf8(":/yellow.png")));
 
         gridLayout->addWidget(label_46, 3, 4, 1, 1);
 
@@ -317,7 +317,7 @@ public:
 
         label_8 = new QLabel(colors);
         label_8->setObjectName(QString::fromUtf8("label_8"));
-        label_8->setPixmap(QPixmap(QString::fromUtf8("../Documents/colors/deeporange.png")));
+        label_8->setPixmap(QPixmap(QString::fromUtf8(":/deeporange.png")));
 
         gridLayout->addWidget(label_8, 7, 0, 1, 1);
 

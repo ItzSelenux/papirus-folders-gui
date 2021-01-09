@@ -1,5 +1,5 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'secdialog.h'
+** Meta object code from reading C++ file 'changelog.h'
 **
 ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.2)
 **
@@ -7,11 +7,11 @@
 *****************************************************************************/
 
 #include <memory>
-#include "secdialog.h"
+#include "changelog.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'secdialog.h' doesn't include <QObject>."
+#error "The header file 'changelog.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.15.2. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -21,30 +21,30 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_secDialog_t {
+struct qt_meta_stringdata_changelog_t {
     QByteArrayData data[5];
-    char stringdata0[68];
+    char stringdata0[63];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_secDialog_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_changelog_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_secDialog_t qt_meta_stringdata_secDialog = {
+static const qt_meta_stringdata_changelog_t qt_meta_stringdata_changelog = {
     {
-QT_MOC_LITERAL(0, 0, 9), // "secDialog"
-QT_MOC_LITERAL(1, 10, 18), // "on_license_clicked"
-QT_MOC_LITERAL(2, 29, 0), // ""
-QT_MOC_LITERAL(3, 30, 15), // "on_help_clicked"
-QT_MOC_LITERAL(4, 46, 21) // "on_pushButton_clicked"
+QT_MOC_LITERAL(0, 0, 9), // "changelog"
+QT_MOC_LITERAL(1, 10, 15), // "on_help_clicked"
+QT_MOC_LITERAL(2, 26, 0), // ""
+QT_MOC_LITERAL(3, 27, 18), // "on_license_clicked"
+QT_MOC_LITERAL(4, 46, 16) // "on_close_clicked"
 
     },
-    "secDialog\0on_license_clicked\0\0"
-    "on_help_clicked\0on_pushButton_clicked"
+    "changelog\0on_help_clicked\0\0"
+    "on_license_clicked\0on_close_clicked"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_secDialog[] = {
+static const uint qt_meta_data_changelog[] = {
 
  // content:
        8,       // revision
@@ -70,45 +70,45 @@ static const uint qt_meta_data_secDialog[] = {
        0        // eod
 };
 
-void secDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void changelog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        auto *_t = static_cast<secDialog *>(_o);
+        auto *_t = static_cast<changelog *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_license_clicked(); break;
-        case 1: _t->on_help_clicked(); break;
-        case 2: _t->on_pushButton_clicked(); break;
+        case 0: _t->on_help_clicked(); break;
+        case 1: _t->on_license_clicked(); break;
+        case 2: _t->on_close_clicked(); break;
         default: ;
         }
     }
     Q_UNUSED(_a);
 }
 
-QT_INIT_METAOBJECT const QMetaObject secDialog::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject changelog::staticMetaObject = { {
     QMetaObject::SuperData::link<QDialog::staticMetaObject>(),
-    qt_meta_stringdata_secDialog.data,
-    qt_meta_data_secDialog,
+    qt_meta_stringdata_changelog.data,
+    qt_meta_data_changelog,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *secDialog::metaObject() const
+const QMetaObject *changelog::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *secDialog::qt_metacast(const char *_clname)
+void *changelog::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_secDialog.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_changelog.stringdata0))
         return static_cast<void*>(this);
     return QDialog::qt_metacast(_clname);
 }
 
-int secDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int changelog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QDialog::qt_metacall(_c, _id, _a);
     if (_id < 0)

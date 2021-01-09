@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'help.ui'
 **
-** Created by: Qt User Interface Compiler version 5.15.1
+** Created by: Qt User Interface Compiler version 5.15.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -11,6 +11,7 @@
 
 #include <QtCore/QLocale>
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QGridLayout>
@@ -33,6 +34,9 @@ public:
         if (help->objectName().isEmpty())
             help->setObjectName(QString::fromUtf8("help"));
         help->resize(565, 303);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/colors.png"), QSize(), QIcon::Normal, QIcon::Off);
+        help->setWindowIcon(icon);
         gridLayout = new QGridLayout(help);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         label = new QLabel(help);
@@ -71,12 +75,12 @@ public:
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">*<span style=\" font-weight:600; font-style:italic;\">papirus-folders-gui </span>requires<span style=\" font-weight:600; font-style:italic;\"> papirus-folders</span> to work, so if the program does not apply the color change check that you have <span style=\" font-weight:600; font-style:italic;\">papirus-folders</span> installed</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; mar"
-                        "gin-right:0px; -qt-block-indent:0; text-indent:0px;\">*if selecting a color does not show a window for Root authentication, try to start the program as Root (open a terminal in the program folder and run it with <span style=\" font-weight:600; font-style:italic;\">sudo ./programname</span>)</p>\n"
+                        "gin-right:0px; -qt-block-indent:0; text-indent:0px;\">*you can install papirus-folders with this link:  <a href=\"https://github.com/PapirusDevelopmentTeam/papirus-folders\"><span style=\" text-decoration: underline; color:#0057ae;\">papirus-folders GitHub Page</span></a></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">*it is recommended that when making the color change you restart your file explorer(it is recommended to kill the process with the task manager) to see the changes</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-ind"
-                        "ent:0px;\">*to see a preview of the colors of the folders open the section <span style=\" font-style:italic;\">&quot;colors preview</span>&quot;</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">*to see "
+                        "a preview of the colors of the folders open the section <span style=\" font-style:italic;\">&quot;colors preview</span>&quot;</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">*for more information about the program and its license see the section &quot;<span style=\" font-style:italic;\">about</span>&quot;</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
