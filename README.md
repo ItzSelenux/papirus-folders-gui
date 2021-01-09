@@ -5,7 +5,7 @@ Notes: This project doesn't provide any folder icons
 
 for this program to work it is necessary that you have installed papirus-folders-gui on your PC
 
-for this program to work it is necessary that you have installed zensu on your PC
+for this program to work it is necessary that you have installed pkexec on your PC
 
 ## Table of contents
 
