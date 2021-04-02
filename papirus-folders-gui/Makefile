@@ -351,7 +351,7 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/features/exceptions.prf \
 		/usr/lib/qt/mkspecs/features/yacc.prf \
 		/usr/lib/qt/mkspecs/features/lex.prf \
-		papirus-folders-GUI.pro changelog.h \
+		papirus-folders-gui.pro changelog.h \
 		colors.h \
 		extra.h \
 		help.h \
@@ -369,18 +369,18 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		papirus.cpp \
 		polkit.cpp \
 		secdialog.cpp
-QMAKE_TARGET  = papirus-folders-GUI
+QMAKE_TARGET  = papirus-folders-gui
 DESTDIR       = 
-TARGET        = papirus-folders-GUI
+TARGET        = papirus-folders-gui
 
 
 first: all
 ####### Build rules
 
-papirus-folders-GUI: ui_changelog.h ui_colors.h ui_extra.h ui_help.h ui_license.h ui_mainwindow.h ui_papirus.h ui_polkit.h ui_secdialog.h $(OBJECTS)  
+papirus-folders-gui: ui_changelog.h ui_colors.h ui_extra.h ui_help.h ui_license.h ui_mainwindow.h ui_papirus.h ui_polkit.h ui_secdialog.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
-Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/lib/qt/mkspecs/features/spec_pre.prf \
+Makefile: papirus-folders-gui.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/common/unix.conf \
 		/usr/lib/qt/mkspecs/common/linux.conf \
 		/usr/lib/qt/mkspecs/common/sanitize.conf \
@@ -640,9 +640,9 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 		/usr/lib/qt/mkspecs/features/exceptions.prf \
 		/usr/lib/qt/mkspecs/features/yacc.prf \
 		/usr/lib/qt/mkspecs/features/lex.prf \
-		papirus-folders-GUI.pro \
+		papirus-folders-gui.pro \
 		img.qrc
-	$(QMAKE) -o Makefile papirus-folders-GUI.pro -config release
+	$(QMAKE) -o Makefile papirus-folders-gui.pro -config release
 /usr/lib/qt/mkspecs/features/spec_pre.prf:
 /usr/lib/qt/mkspecs/common/unix.conf:
 /usr/lib/qt/mkspecs/common/linux.conf:
@@ -903,15 +903,15 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 /usr/lib/qt/mkspecs/features/exceptions.prf:
 /usr/lib/qt/mkspecs/features/yacc.prf:
 /usr/lib/qt/mkspecs/features/lex.prf:
-papirus-folders-GUI.pro:
+papirus-folders-gui.pro:
 img.qrc:
 qmake: FORCE
-	@$(QMAKE) -o Makefile papirus-folders-GUI.pro -config release
+	@$(QMAKE) -o Makefile papirus-folders-gui.pro -config release
 
 qmake_all: FORCE
 
 
-all: Makefile papirus-folders-GUI
+all: Makefile papirus-folders-gui
 
 dist: distdir FORCE
 	(cd `dirname $(DISTDIR)` && $(TAR) $(DISTNAME).tar $(DISTNAME) && $(COMPRESS) $(DISTNAME).tar) && $(MOVE) `dirname $(DISTDIR)`/$(DISTNAME).tar.gz . && $(DEL_FILE) -r $(DISTDIR)
@@ -1170,12 +1170,12 @@ moc_secdialog.o: moc_secdialog.cpp
 ####### Install
 
 install_target: first FORCE
-	@test -d $(INSTALL_ROOT)/opt/papirus-folders-GUI/bin || mkdir -p $(INSTALL_ROOT)/opt/papirus-folders-GUI/bin
-	$(QINSTALL_PROGRAM) $(QMAKE_TARGET) $(INSTALL_ROOT)/opt/papirus-folders-GUI/bin/$(QMAKE_TARGET)
+	@test -d $(INSTALL_ROOT)/opt/papirus-folders-gui/bin || mkdir -p $(INSTALL_ROOT)/opt/papirus-folders-gui/bin
+	$(QINSTALL_PROGRAM) $(QMAKE_TARGET) $(INSTALL_ROOT)/opt/papirus-folders-gui/bin/$(QMAKE_TARGET)
 
 uninstall_target: FORCE
-	-$(DEL_FILE) $(INSTALL_ROOT)/opt/papirus-folders-GUI/bin/$(QMAKE_TARGET)
-	-$(DEL_DIR) $(INSTALL_ROOT)/opt/papirus-folders-GUI/bin/ 
+	-$(DEL_FILE) $(INSTALL_ROOT)/opt/papirus-folders-gui/bin/$(QMAKE_TARGET)
+	-$(DEL_DIR) $(INSTALL_ROOT)/opt/papirus-folders-gui/bin/ 
 
 
 install: install_target  FORCE
