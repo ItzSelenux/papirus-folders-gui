@@ -33,7 +33,8 @@ public:
     {
         if (help->objectName().isEmpty())
             help->setObjectName(QString::fromUtf8("help"));
-        help->resize(565, 303);
+        help->resize(699, 432);
+        help->setMinimumSize(QSize(699, 432));
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/colors.png"), QSize(), QIcon::Normal, QIcon::Off);
         help->setWindowIcon(icon);
@@ -71,20 +72,24 @@ public:
         textBrowser->setHtml(QCoreApplication::translate("help", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Cantarell'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">*<span style=\" font-weight:600; font-style:italic;\">papirus-folders-gui </span>requires<span style=\" font-weight:600; font-style:italic;\"> papirus-folders</span> to work, so if the program does not apply the color change check that you have <span style=\" font-weight:600; font-style:italic;\">papirus-folders</span> installed</p>\n"
+"</style></head><body style=\" font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Cantarell';\">*</span><span style=\" font-family:'Cantarell'; font-weight:600; font-style:italic;\">papirus-folders-gui </span><span style=\" font-family:'Cantarell';\">requires</span><span style=\" font-family:'Cantarell'; font-weight:600; font-style:italic;\"> papirus-folders</span><span style=\" font-family:'Cantarell';\"> to work, so if the program does not apply the color change, check that you have </span><span style=\" font-family:'Cantarell'; font-weight:600; font-style:italic;\">papirus-folders</span><span style=\" font-family:"
+                        "'Cantarell';\"> installed</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Cantarell';\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Cantarell';\">*You can install </span><span style=\" font-family:'Cantarell'; font-weight:600;\">papirus-folders</span><span style=\" font-family:'Cantarell';\"> following the &quot;How to install papirus-folders&quot; (Extra section) instructions, or from the  </span><a href=\"https://github.com/PapirusDevelopmentTeam/papirus-folders\"><span style=\" font-family:'Cantarell'; text-decoration: underline; color:#0057ae;\">papirus-folders GitHub Page</span></a></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Cantarell';\"><br /><"
+                        "/p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Cantarell';\">*It is recommended that when making the color change you restart your file explorer (it is recommended to kill the process with the task manager) to see the changes</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Cantarell';\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">*If the color do not change please try to start the Polkit daemon with the &quot;How to start the &quot;Polkit Daemon&quot;&quot;(Extra Section) instructions</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; mar"
-                        "gin-right:0px; -qt-block-indent:0; text-indent:0px;\">*you can install papirus-folders with this link:  <a href=\"https://github.com/PapirusDevelopmentTeam/papirus-folders\"><span style=\" text-decoration: underline; color:#0057ae;\">papirus-folders GitHub Page</span></a></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">*it is recommended that when making the color change you restart your file explorer(it is recommended to kill the process with the task manager) to see the changes</p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">*to see "
-                        "a preview of the colors of the folders open the section <span style=\" font-style:italic;\">&quot;colors preview</span>&quot;</p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">*for more information about the program and its license see the section &quot;<span style=\" font-style:italic;\">about</span>&quot;</p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">*to restore the color to the default of papirus press the button &quot;<span style=\" font-style:italic;\">Revert to default</span>&quot;</p></body></html>", nullptr));
+"<p style=\" margin-top:0px; margin-botto"
+                        "m:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Cantarell';\">*To see a preview of the colors of the folders open the section </span><span style=\" font-family:'Cantarell'; font-style:italic;\">&quot;Colors preview</span><span style=\" font-family:'Cantarell';\">&quot;</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Cantarell';\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Cantarell';\">*To restore the color to the default of papirus press the button &quot;</span><span style=\" font-family:'Cantarell'; font-style:italic;\">Revert to default</span><span style=\" font-family:'Cantarell';\">&quot;</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0"
+                        "px; -qt-block-indent:0; text-indent:0px; font-family:'Cantarell';\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Cantarell';\">*For more information about the program and its license see the section &quot;A</span><span style=\" font-family:'Cantarell'; font-style:italic;\">bout</span><span style=\" font-family:'Cantarell';\">&quot;</span></p></body></html>", nullptr));
     } // retranslateUi
 
 };

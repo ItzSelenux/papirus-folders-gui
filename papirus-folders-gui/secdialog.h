@@ -22,6 +22,8 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_close_clicked();
+
 private:
     Ui::secDialog *ui;
 };

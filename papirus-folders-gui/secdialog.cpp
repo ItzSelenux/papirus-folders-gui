@@ -39,3 +39,8 @@ void secDialog::on_pushButton_clicked()
     changelog.setModal(true);
     changelog.exec();
 }
+
+void secDialog::on_close_clicked()
+{
+    close();
+}

@@ -11,26 +11,35 @@ CONFIG += c++11
 SOURCES += \
     changelog.cpp \
     colors.cpp \
+    extra.cpp \
     help.cpp \
     license.cpp \
     main.cpp \
     mainwindow.cpp \
+    papirus.cpp \
+    polkit.cpp \
     secdialog.cpp
 
 HEADERS += \
     changelog.h \
     colors.h \
+    extra.h \
     help.h \
     license.h \
     mainwindow.h \
+    papirus.h \
+    polkit.h \
     secdialog.h
 
 FORMS += \
     changelog.ui \
     colors.ui \
+    extra.ui \
     help.ui \
     license.ui \
     mainwindow.ui \
+    papirus.ui \
+    polkit.ui \
     secdialog.ui
 
 # Default rules for deployment.
@@ -39,4 +48,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    traducciones.qrc
+    img.qrc

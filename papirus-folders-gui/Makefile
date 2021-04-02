@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = papirus-folders-GUI1.0.0
-DISTDIR = /home/itszariep/Documents/documents/papirus-folders-gui\ (copy)/.tmp/papirus-folders-GUI1.0.0
+DISTDIR = /home/itszariep/papirus-folders-gui/papirus-folders-gui/.tmp/papirus-folders-GUI1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1
 LIBS          = $(SUBLIBS) /usr/lib/libQt5Widgets.so /usr/lib/libQt5Gui.so /usr/lib/libQt5Core.so -lGL -lpthread   
@@ -54,30 +54,42 @@ OBJECTS_DIR   = ./
 
 SOURCES       = changelog.cpp \
 		colors.cpp \
+		extra.cpp \
 		help.cpp \
 		license.cpp \
 		main.cpp \
 		mainwindow.cpp \
-		secdialog.cpp qrc_traducciones.cpp \
+		papirus.cpp \
+		polkit.cpp \
+		secdialog.cpp qrc_img.cpp \
 		moc_changelog.cpp \
 		moc_colors.cpp \
+		moc_extra.cpp \
 		moc_help.cpp \
 		moc_license.cpp \
 		moc_mainwindow.cpp \
+		moc_papirus.cpp \
+		moc_polkit.cpp \
 		moc_secdialog.cpp
 OBJECTS       = changelog.o \
 		colors.o \
+		extra.o \
 		help.o \
 		license.o \
 		main.o \
 		mainwindow.o \
+		papirus.o \
+		polkit.o \
 		secdialog.o \
-		qrc_traducciones.o \
+		qrc_img.o \
 		moc_changelog.o \
 		moc_colors.o \
+		moc_extra.o \
 		moc_help.o \
 		moc_license.o \
 		moc_mainwindow.o \
+		moc_papirus.o \
+		moc_polkit.o \
 		moc_secdialog.o
 DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/common/unix.conf \
@@ -89,9 +101,6 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/common/g++-unix.conf \
 		/usr/lib/qt/mkspecs/qconfig.pri \
 		/usr/lib/qt/mkspecs/modules/qt_Attica.pri \
-		/usr/lib/qt/mkspecs/modules/qt_Baloo.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KActivities.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KActivitiesStats.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KArchive.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KAuth.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KAuthCore.pri \
@@ -102,26 +111,20 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/modules/qt_KConfigCore.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KConfigGui.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KConfigWidgets.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KContacts.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KCoreAddons.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KCrash.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KDBusAddons.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KDeclarative.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KDESu.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KEmoticons.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KFileMetaData.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KGlobalAccel.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KGuiAddons.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KHolidays.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KI18n.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KIconThemes.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KIdleTime.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KIOCore.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KIOFileWidgets.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KIOGui.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KIOWidgets.pri \
 		/usr/lib/qt/mkspecs/modules/qt_Kirigami2.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KItemModels.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KItemViews.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KJobWidgets.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KNewStuff.pri \
@@ -129,33 +132,52 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/modules/qt_KNotifications.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KNotifyConfig.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KNTLM.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KParts.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KPeople.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KPeopleWidgets.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KPty.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KrossCore.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KrossUi.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KRunner.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KScreen.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KService.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KSyntaxHighlighting.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KTextEditor.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KTextWidgets.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KUnitConversion.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KUserFeedbackCore.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KUserFeedbackWidgets.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KWallet.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KWaylandClient.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KWaylandServer.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KWidgetsAddons.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KWindowSystem.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KXmlGui.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3danimation.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3danimation_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dcore.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dcore_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dextras.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dextras_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dinput.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dinput_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dlogic.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dlogic_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquick.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquick_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquickanimation.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquickanimation_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquickextras.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquickextras_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquickinput.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquickinput_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquickrender.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquickrender_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquickscene2d.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquickscene2d_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3drender.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3drender_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_accessibility_support_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_bluetooth.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_bluetooth_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_bodymovin_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_bootstrap_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_charts.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_charts_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_concurrent.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_concurrent_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_core.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_core_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_datavisualization.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_datavisualization_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_dbus.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_dbus_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_designer.pri \
@@ -169,11 +191,14 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_fb_support_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_fontdatabase_support_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_gamepad.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_gamepad_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_glx_support_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_gui.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_gui_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_help.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_help_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_hunspellinputmethod_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_input_support_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_kms_support_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_linuxaccessibility_support_private.pri \
@@ -186,6 +211,10 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_network.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_network_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_networkauth.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_networkauth_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_nfc.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_nfc_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_opengl.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_opengl_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_openglextensions.pri \
@@ -202,6 +231,8 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/modules/qt_lib_positioningquick_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_printsupport.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_printsupport_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_purchasing.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_purchasing_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_qml.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_qml_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_qmldebug_private.pri \
@@ -233,12 +264,20 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_quickwidgets.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_quickwidgets_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_remoteobjects.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_remoteobjects_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_repparser.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_repparser_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_script.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_script_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_scripttools.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_scripttools_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_scxml.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_scxml_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_sensors.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_sensors_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_serialbus.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_serialbus_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_serialport.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_serialport_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_service_support_private.pri \
@@ -254,6 +293,8 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/modules/qt_lib_uiplugin.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_uitools.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_uitools_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_virtualkeyboard.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_virtualkeyboard_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_vulkan_support_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_waylandclient.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_waylandclient_private.pri \
@@ -268,10 +309,10 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webenginewidgets.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webenginewidgets_private.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_webkit.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_webkit_private.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_webkitwidgets.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_webkitwidgets_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_websockets.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_websockets_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_webview.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_webview_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_widgets.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_widgets_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_x11extras.pri \
@@ -282,13 +323,10 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/modules/qt_lib_xml_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_xmlpatterns.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_xmlpatterns_private.pri \
-		/usr/lib/qt/mkspecs/modules/qt_phonon4qt5.pri \
-		/usr/lib/qt/mkspecs/modules/qt_Prison.pri \
 		/usr/lib/qt/mkspecs/modules/qt_QuickAddons.pri \
 		/usr/lib/qt/mkspecs/modules/qt_Solid.pri \
 		/usr/lib/qt/mkspecs/modules/qt_SonnetCore.pri \
 		/usr/lib/qt/mkspecs/modules/qt_SonnetUi.pri \
-		/usr/lib/qt/mkspecs/modules/qt_ThreadWeaver.pri \
 		/usr/lib/qt/mkspecs/features/qt_functions.prf \
 		/usr/lib/qt/mkspecs/features/qt_config.prf \
 		/usr/lib/qt/mkspecs/linux-g++/qmake.conf \
@@ -315,15 +353,21 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/features/lex.prf \
 		papirus-folders-GUI.pro changelog.h \
 		colors.h \
+		extra.h \
 		help.h \
 		license.h \
 		mainwindow.h \
+		papirus.h \
+		polkit.h \
 		secdialog.h changelog.cpp \
 		colors.cpp \
+		extra.cpp \
 		help.cpp \
 		license.cpp \
 		main.cpp \
 		mainwindow.cpp \
+		papirus.cpp \
+		polkit.cpp \
 		secdialog.cpp
 QMAKE_TARGET  = papirus-folders-GUI
 DESTDIR       = 
@@ -333,7 +377,7 @@ TARGET        = papirus-folders-GUI
 first: all
 ####### Build rules
 
-papirus-folders-GUI: ui_changelog.h ui_colors.h ui_help.h ui_license.h ui_mainwindow.h ui_secdialog.h $(OBJECTS)  
+papirus-folders-GUI: ui_changelog.h ui_colors.h ui_extra.h ui_help.h ui_license.h ui_mainwindow.h ui_papirus.h ui_polkit.h ui_secdialog.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
 Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/lib/qt/mkspecs/features/spec_pre.prf \
@@ -346,9 +390,6 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 		/usr/lib/qt/mkspecs/common/g++-unix.conf \
 		/usr/lib/qt/mkspecs/qconfig.pri \
 		/usr/lib/qt/mkspecs/modules/qt_Attica.pri \
-		/usr/lib/qt/mkspecs/modules/qt_Baloo.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KActivities.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KActivitiesStats.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KArchive.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KAuth.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KAuthCore.pri \
@@ -359,26 +400,20 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 		/usr/lib/qt/mkspecs/modules/qt_KConfigCore.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KConfigGui.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KConfigWidgets.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KContacts.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KCoreAddons.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KCrash.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KDBusAddons.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KDeclarative.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KDESu.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KEmoticons.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KFileMetaData.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KGlobalAccel.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KGuiAddons.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KHolidays.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KI18n.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KIconThemes.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KIdleTime.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KIOCore.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KIOFileWidgets.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KIOGui.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KIOWidgets.pri \
 		/usr/lib/qt/mkspecs/modules/qt_Kirigami2.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KItemModels.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KItemViews.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KJobWidgets.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KNewStuff.pri \
@@ -386,33 +421,52 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 		/usr/lib/qt/mkspecs/modules/qt_KNotifications.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KNotifyConfig.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KNTLM.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KParts.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KPeople.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KPeopleWidgets.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KPty.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KrossCore.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KrossUi.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KRunner.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KScreen.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KService.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KSyntaxHighlighting.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KTextEditor.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KTextWidgets.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KUnitConversion.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KUserFeedbackCore.pri \
-		/usr/lib/qt/mkspecs/modules/qt_KUserFeedbackWidgets.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KWallet.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KWaylandClient.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KWaylandServer.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KWidgetsAddons.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KWindowSystem.pri \
 		/usr/lib/qt/mkspecs/modules/qt_KXmlGui.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3danimation.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3danimation_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dcore.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dcore_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dextras.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dextras_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dinput.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dinput_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dlogic.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dlogic_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquick.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquick_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquickanimation.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquickanimation_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquickextras.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquickextras_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquickinput.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquickinput_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquickrender.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquickrender_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquickscene2d.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3dquickscene2d_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3drender.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_3drender_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_accessibility_support_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_bluetooth.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_bluetooth_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_bodymovin_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_bootstrap_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_charts.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_charts_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_concurrent.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_concurrent_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_core.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_core_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_datavisualization.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_datavisualization_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_dbus.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_dbus_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_designer.pri \
@@ -426,11 +480,14 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 		/usr/lib/qt/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_fb_support_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_fontdatabase_support_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_gamepad.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_gamepad_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_glx_support_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_gui.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_gui_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_help.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_help_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_hunspellinputmethod_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_input_support_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_kms_support_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_linuxaccessibility_support_private.pri \
@@ -443,6 +500,10 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 		/usr/lib/qt/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_network.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_network_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_networkauth.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_networkauth_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_nfc.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_nfc_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_opengl.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_opengl_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_openglextensions.pri \
@@ -459,6 +520,8 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 		/usr/lib/qt/mkspecs/modules/qt_lib_positioningquick_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_printsupport.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_printsupport_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_purchasing.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_purchasing_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_qml.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_qml_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_qmldebug_private.pri \
@@ -490,12 +553,20 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 		/usr/lib/qt/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_quickwidgets.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_quickwidgets_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_remoteobjects.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_remoteobjects_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_repparser.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_repparser_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_script.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_script_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_scripttools.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_scripttools_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_scxml.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_scxml_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_sensors.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_sensors_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_serialbus.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_serialbus_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_serialport.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_serialport_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_service_support_private.pri \
@@ -511,6 +582,8 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 		/usr/lib/qt/mkspecs/modules/qt_lib_uiplugin.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_uitools.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_uitools_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_virtualkeyboard.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_virtualkeyboard_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_vulkan_support_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_waylandclient.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_waylandclient_private.pri \
@@ -525,10 +598,10 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 		/usr/lib/qt/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webenginewidgets.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webenginewidgets_private.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_webkit.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_webkit_private.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_webkitwidgets.pri \
-		/usr/lib/qt/mkspecs/modules/qt_lib_webkitwidgets_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_websockets.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_websockets_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_webview.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_webview_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_widgets.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_widgets_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_x11extras.pri \
@@ -539,13 +612,10 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 		/usr/lib/qt/mkspecs/modules/qt_lib_xml_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_xmlpatterns.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_xmlpatterns_private.pri \
-		/usr/lib/qt/mkspecs/modules/qt_phonon4qt5.pri \
-		/usr/lib/qt/mkspecs/modules/qt_Prison.pri \
 		/usr/lib/qt/mkspecs/modules/qt_QuickAddons.pri \
 		/usr/lib/qt/mkspecs/modules/qt_Solid.pri \
 		/usr/lib/qt/mkspecs/modules/qt_SonnetCore.pri \
 		/usr/lib/qt/mkspecs/modules/qt_SonnetUi.pri \
-		/usr/lib/qt/mkspecs/modules/qt_ThreadWeaver.pri \
 		/usr/lib/qt/mkspecs/features/qt_functions.prf \
 		/usr/lib/qt/mkspecs/features/qt_config.prf \
 		/usr/lib/qt/mkspecs/linux-g++/qmake.conf \
@@ -571,7 +641,7 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 		/usr/lib/qt/mkspecs/features/yacc.prf \
 		/usr/lib/qt/mkspecs/features/lex.prf \
 		papirus-folders-GUI.pro \
-		traducciones.qrc
+		img.qrc
 	$(QMAKE) -o Makefile papirus-folders-GUI.pro -config release
 /usr/lib/qt/mkspecs/features/spec_pre.prf:
 /usr/lib/qt/mkspecs/common/unix.conf:
@@ -583,9 +653,6 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 /usr/lib/qt/mkspecs/common/g++-unix.conf:
 /usr/lib/qt/mkspecs/qconfig.pri:
 /usr/lib/qt/mkspecs/modules/qt_Attica.pri:
-/usr/lib/qt/mkspecs/modules/qt_Baloo.pri:
-/usr/lib/qt/mkspecs/modules/qt_KActivities.pri:
-/usr/lib/qt/mkspecs/modules/qt_KActivitiesStats.pri:
 /usr/lib/qt/mkspecs/modules/qt_KArchive.pri:
 /usr/lib/qt/mkspecs/modules/qt_KAuth.pri:
 /usr/lib/qt/mkspecs/modules/qt_KAuthCore.pri:
@@ -596,26 +663,20 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 /usr/lib/qt/mkspecs/modules/qt_KConfigCore.pri:
 /usr/lib/qt/mkspecs/modules/qt_KConfigGui.pri:
 /usr/lib/qt/mkspecs/modules/qt_KConfigWidgets.pri:
-/usr/lib/qt/mkspecs/modules/qt_KContacts.pri:
 /usr/lib/qt/mkspecs/modules/qt_KCoreAddons.pri:
 /usr/lib/qt/mkspecs/modules/qt_KCrash.pri:
 /usr/lib/qt/mkspecs/modules/qt_KDBusAddons.pri:
 /usr/lib/qt/mkspecs/modules/qt_KDeclarative.pri:
-/usr/lib/qt/mkspecs/modules/qt_KDESu.pri:
-/usr/lib/qt/mkspecs/modules/qt_KEmoticons.pri:
 /usr/lib/qt/mkspecs/modules/qt_KFileMetaData.pri:
 /usr/lib/qt/mkspecs/modules/qt_KGlobalAccel.pri:
 /usr/lib/qt/mkspecs/modules/qt_KGuiAddons.pri:
-/usr/lib/qt/mkspecs/modules/qt_KHolidays.pri:
 /usr/lib/qt/mkspecs/modules/qt_KI18n.pri:
 /usr/lib/qt/mkspecs/modules/qt_KIconThemes.pri:
-/usr/lib/qt/mkspecs/modules/qt_KIdleTime.pri:
 /usr/lib/qt/mkspecs/modules/qt_KIOCore.pri:
 /usr/lib/qt/mkspecs/modules/qt_KIOFileWidgets.pri:
 /usr/lib/qt/mkspecs/modules/qt_KIOGui.pri:
 /usr/lib/qt/mkspecs/modules/qt_KIOWidgets.pri:
 /usr/lib/qt/mkspecs/modules/qt_Kirigami2.pri:
-/usr/lib/qt/mkspecs/modules/qt_KItemModels.pri:
 /usr/lib/qt/mkspecs/modules/qt_KItemViews.pri:
 /usr/lib/qt/mkspecs/modules/qt_KJobWidgets.pri:
 /usr/lib/qt/mkspecs/modules/qt_KNewStuff.pri:
@@ -623,33 +684,52 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 /usr/lib/qt/mkspecs/modules/qt_KNotifications.pri:
 /usr/lib/qt/mkspecs/modules/qt_KNotifyConfig.pri:
 /usr/lib/qt/mkspecs/modules/qt_KNTLM.pri:
-/usr/lib/qt/mkspecs/modules/qt_KParts.pri:
-/usr/lib/qt/mkspecs/modules/qt_KPeople.pri:
-/usr/lib/qt/mkspecs/modules/qt_KPeopleWidgets.pri:
-/usr/lib/qt/mkspecs/modules/qt_KPty.pri:
-/usr/lib/qt/mkspecs/modules/qt_KrossCore.pri:
-/usr/lib/qt/mkspecs/modules/qt_KrossUi.pri:
-/usr/lib/qt/mkspecs/modules/qt_KRunner.pri:
-/usr/lib/qt/mkspecs/modules/qt_KScreen.pri:
 /usr/lib/qt/mkspecs/modules/qt_KService.pri:
 /usr/lib/qt/mkspecs/modules/qt_KSyntaxHighlighting.pri:
-/usr/lib/qt/mkspecs/modules/qt_KTextEditor.pri:
 /usr/lib/qt/mkspecs/modules/qt_KTextWidgets.pri:
-/usr/lib/qt/mkspecs/modules/qt_KUnitConversion.pri:
-/usr/lib/qt/mkspecs/modules/qt_KUserFeedbackCore.pri:
-/usr/lib/qt/mkspecs/modules/qt_KUserFeedbackWidgets.pri:
 /usr/lib/qt/mkspecs/modules/qt_KWallet.pri:
 /usr/lib/qt/mkspecs/modules/qt_KWaylandClient.pri:
 /usr/lib/qt/mkspecs/modules/qt_KWaylandServer.pri:
 /usr/lib/qt/mkspecs/modules/qt_KWidgetsAddons.pri:
 /usr/lib/qt/mkspecs/modules/qt_KWindowSystem.pri:
 /usr/lib/qt/mkspecs/modules/qt_KXmlGui.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3danimation.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3danimation_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3dcore.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3dcore_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3dextras.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3dextras_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3dinput.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3dinput_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3dlogic.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3dlogic_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3dquick.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3dquick_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3dquickanimation.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3dquickanimation_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3dquickextras.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3dquickextras_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3dquickinput.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3dquickinput_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3dquickrender.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3dquickrender_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3dquickscene2d.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3dquickscene2d_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3drender.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_3drender_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_accessibility_support_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_bluetooth.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_bluetooth_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_bodymovin_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_bootstrap_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_charts.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_charts_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_concurrent.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_concurrent_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_core.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_core_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_datavisualization.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_datavisualization_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_dbus.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_dbus_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_designer.pri:
@@ -663,11 +743,14 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 /usr/lib/qt/mkspecs/modules/qt_lib_eventdispatcher_support_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_fb_support_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_fontdatabase_support_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_gamepad.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_gamepad_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_glx_support_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_gui.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_gui_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_help.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_help_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_hunspellinputmethod_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_input_support_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_kms_support_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_linuxaccessibility_support_private.pri:
@@ -680,6 +763,10 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 /usr/lib/qt/mkspecs/modules/qt_lib_multimediawidgets_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_network.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_network_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_networkauth.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_networkauth_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_nfc.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_nfc_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_opengl.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_opengl_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_openglextensions.pri:
@@ -696,6 +783,8 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 /usr/lib/qt/mkspecs/modules/qt_lib_positioningquick_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_printsupport.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_printsupport_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_purchasing.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_purchasing_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_qml.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_qml_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_qmldebug_private.pri:
@@ -727,12 +816,20 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 /usr/lib/qt/mkspecs/modules/qt_lib_quicktemplates2_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_quickwidgets.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_quickwidgets_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_remoteobjects.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_remoteobjects_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_repparser.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_repparser_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_script.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_script_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_scripttools.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_scripttools_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_scxml.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_scxml_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_sensors.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_sensors_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_serialbus.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_serialbus_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_serialport.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_serialport_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_service_support_private.pri:
@@ -748,6 +845,8 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 /usr/lib/qt/mkspecs/modules/qt_lib_uiplugin.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_uitools.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_uitools_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_virtualkeyboard.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_virtualkeyboard_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_vulkan_support_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_waylandclient.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_waylandclient_private.pri:
@@ -762,10 +861,10 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 /usr/lib/qt/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_webenginewidgets.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_webenginewidgets_private.pri:
-/usr/lib/qt/mkspecs/modules/qt_lib_webkit.pri:
-/usr/lib/qt/mkspecs/modules/qt_lib_webkit_private.pri:
-/usr/lib/qt/mkspecs/modules/qt_lib_webkitwidgets.pri:
-/usr/lib/qt/mkspecs/modules/qt_lib_webkitwidgets_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_websockets.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_websockets_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_webview.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_webview_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_widgets.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_widgets_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_x11extras.pri:
@@ -776,13 +875,10 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 /usr/lib/qt/mkspecs/modules/qt_lib_xml_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_xmlpatterns.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_xmlpatterns_private.pri:
-/usr/lib/qt/mkspecs/modules/qt_phonon4qt5.pri:
-/usr/lib/qt/mkspecs/modules/qt_Prison.pri:
 /usr/lib/qt/mkspecs/modules/qt_QuickAddons.pri:
 /usr/lib/qt/mkspecs/modules/qt_Solid.pri:
 /usr/lib/qt/mkspecs/modules/qt_SonnetCore.pri:
 /usr/lib/qt/mkspecs/modules/qt_SonnetUi.pri:
-/usr/lib/qt/mkspecs/modules/qt_ThreadWeaver.pri:
 /usr/lib/qt/mkspecs/features/qt_functions.prf:
 /usr/lib/qt/mkspecs/features/qt_config.prf:
 /usr/lib/qt/mkspecs/linux-g++/qmake.conf:
@@ -808,7 +904,7 @@ Makefile: papirus-folders-GUI.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/
 /usr/lib/qt/mkspecs/features/yacc.prf:
 /usr/lib/qt/mkspecs/features/lex.prf:
 papirus-folders-GUI.pro:
-traducciones.qrc:
+img.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile papirus-folders-GUI.pro -config release
 
@@ -823,11 +919,11 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents traducciones.qrc $(DISTDIR)/
+	$(COPY_FILE) --parents img.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/qt/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents changelog.h colors.h help.h license.h mainwindow.h secdialog.h $(DISTDIR)/
-	$(COPY_FILE) --parents changelog.cpp colors.cpp help.cpp license.cpp main.cpp mainwindow.cpp secdialog.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents changelog.ui colors.ui help.ui license.ui mainwindow.ui secdialog.ui $(DISTDIR)/
+	$(COPY_FILE) --parents changelog.h colors.h extra.h help.h license.h mainwindow.h papirus.h polkit.h secdialog.h $(DISTDIR)/
+	$(COPY_FILE) --parents changelog.cpp colors.cpp extra.cpp help.cpp license.cpp main.cpp mainwindow.cpp papirus.cpp polkit.cpp secdialog.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents changelog.ui colors.ui extra.ui help.ui license.ui mainwindow.ui papirus.ui polkit.ui secdialog.ui $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -851,10 +947,10 @@ check: first
 
 benchmark: first
 
-compiler_rcc_make_all: qrc_traducciones.cpp
+compiler_rcc_make_all: qrc_img.cpp
 compiler_rcc_clean:
-	-$(DEL_FILE) qrc_traducciones.cpp
-qrc_traducciones.cpp: traducciones.qrc \
+	-$(DEL_FILE) qrc_img.cpp
+qrc_img.cpp: img.qrc \
 		/usr/bin/rcc \
 		paleorange.png \
 		red.png \
@@ -880,7 +976,7 @@ qrc_traducciones.cpp: traducciones.qrc \
 		brown.png \
 		indigo.png \
 		pink.png
-	/usr/bin/rcc -name traducciones traducciones.qrc -o qrc_traducciones.cpp
+	/usr/bin/rcc -name img img.qrc -o qrc_img.cpp
 
 compiler_moc_predefs_make_all: moc_predefs.h
 compiler_moc_predefs_clean:
@@ -888,46 +984,61 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /usr/lib/qt/mkspecs/features/data/dummy.cpp
 	g++ -pipe -O2 -std=gnu++11 -Wall -Wextra -dM -E -o moc_predefs.h /usr/lib/qt/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_changelog.cpp moc_colors.cpp moc_help.cpp moc_license.cpp moc_mainwindow.cpp moc_secdialog.cpp
+compiler_moc_header_make_all: moc_changelog.cpp moc_colors.cpp moc_extra.cpp moc_help.cpp moc_license.cpp moc_mainwindow.cpp moc_papirus.cpp moc_polkit.cpp moc_secdialog.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_changelog.cpp moc_colors.cpp moc_help.cpp moc_license.cpp moc_mainwindow.cpp moc_secdialog.cpp
+	-$(DEL_FILE) moc_changelog.cpp moc_colors.cpp moc_extra.cpp moc_help.cpp moc_license.cpp moc_mainwindow.cpp moc_papirus.cpp moc_polkit.cpp moc_secdialog.cpp
 moc_changelog.cpp: changelog.h \
 		moc_predefs.h \
 		/usr/bin/moc
-	/usr/bin/moc $(DEFINES) --include '/home/itszariep/Documents/documents/papirus-folders-gui (copy)/moc_predefs.h' -I/usr/lib/qt/mkspecs/linux-g++ -I'/home/itszariep/Documents/documents/papirus-folders-gui (copy)' -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I/usr/include/c++/10.2.0 -I/usr/include/c++/10.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/10.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed -I/usr/include changelog.h -o moc_changelog.cpp
+	/usr/bin/moc $(DEFINES) --include /home/itszariep/papirus-folders-gui/papirus-folders-gui/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/itszariep/papirus-folders-gui/papirus-folders-gui -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I/usr/include/c++/10.2.0 -I/usr/include/c++/10.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/10.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed -I/usr/include changelog.h -o moc_changelog.cpp
 
 moc_colors.cpp: colors.h \
 		moc_predefs.h \
 		/usr/bin/moc
-	/usr/bin/moc $(DEFINES) --include '/home/itszariep/Documents/documents/papirus-folders-gui (copy)/moc_predefs.h' -I/usr/lib/qt/mkspecs/linux-g++ -I'/home/itszariep/Documents/documents/papirus-folders-gui (copy)' -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I/usr/include/c++/10.2.0 -I/usr/include/c++/10.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/10.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed -I/usr/include colors.h -o moc_colors.cpp
+	/usr/bin/moc $(DEFINES) --include /home/itszariep/papirus-folders-gui/papirus-folders-gui/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/itszariep/papirus-folders-gui/papirus-folders-gui -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I/usr/include/c++/10.2.0 -I/usr/include/c++/10.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/10.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed -I/usr/include colors.h -o moc_colors.cpp
+
+moc_extra.cpp: extra.h \
+		moc_predefs.h \
+		/usr/bin/moc
+	/usr/bin/moc $(DEFINES) --include /home/itszariep/papirus-folders-gui/papirus-folders-gui/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/itszariep/papirus-folders-gui/papirus-folders-gui -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I/usr/include/c++/10.2.0 -I/usr/include/c++/10.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/10.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed -I/usr/include extra.h -o moc_extra.cpp
 
 moc_help.cpp: help.h \
 		moc_predefs.h \
 		/usr/bin/moc
-	/usr/bin/moc $(DEFINES) --include '/home/itszariep/Documents/documents/papirus-folders-gui (copy)/moc_predefs.h' -I/usr/lib/qt/mkspecs/linux-g++ -I'/home/itszariep/Documents/documents/papirus-folders-gui (copy)' -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I/usr/include/c++/10.2.0 -I/usr/include/c++/10.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/10.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed -I/usr/include help.h -o moc_help.cpp
+	/usr/bin/moc $(DEFINES) --include /home/itszariep/papirus-folders-gui/papirus-folders-gui/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/itszariep/papirus-folders-gui/papirus-folders-gui -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I/usr/include/c++/10.2.0 -I/usr/include/c++/10.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/10.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed -I/usr/include help.h -o moc_help.cpp
 
 moc_license.cpp: license.h \
 		moc_predefs.h \
 		/usr/bin/moc
-	/usr/bin/moc $(DEFINES) --include '/home/itszariep/Documents/documents/papirus-folders-gui (copy)/moc_predefs.h' -I/usr/lib/qt/mkspecs/linux-g++ -I'/home/itszariep/Documents/documents/papirus-folders-gui (copy)' -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I/usr/include/c++/10.2.0 -I/usr/include/c++/10.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/10.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed -I/usr/include license.h -o moc_license.cpp
+	/usr/bin/moc $(DEFINES) --include /home/itszariep/papirus-folders-gui/papirus-folders-gui/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/itszariep/papirus-folders-gui/papirus-folders-gui -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I/usr/include/c++/10.2.0 -I/usr/include/c++/10.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/10.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed -I/usr/include license.h -o moc_license.cpp
 
 moc_mainwindow.cpp: mainwindow.h \
 		moc_predefs.h \
 		/usr/bin/moc
-	/usr/bin/moc $(DEFINES) --include '/home/itszariep/Documents/documents/papirus-folders-gui (copy)/moc_predefs.h' -I/usr/lib/qt/mkspecs/linux-g++ -I'/home/itszariep/Documents/documents/papirus-folders-gui (copy)' -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I/usr/include/c++/10.2.0 -I/usr/include/c++/10.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/10.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed -I/usr/include mainwindow.h -o moc_mainwindow.cpp
+	/usr/bin/moc $(DEFINES) --include /home/itszariep/papirus-folders-gui/papirus-folders-gui/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/itszariep/papirus-folders-gui/papirus-folders-gui -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I/usr/include/c++/10.2.0 -I/usr/include/c++/10.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/10.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed -I/usr/include mainwindow.h -o moc_mainwindow.cpp
+
+moc_papirus.cpp: papirus.h \
+		moc_predefs.h \
+		/usr/bin/moc
+	/usr/bin/moc $(DEFINES) --include /home/itszariep/papirus-folders-gui/papirus-folders-gui/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/itszariep/papirus-folders-gui/papirus-folders-gui -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I/usr/include/c++/10.2.0 -I/usr/include/c++/10.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/10.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed -I/usr/include papirus.h -o moc_papirus.cpp
+
+moc_polkit.cpp: polkit.h \
+		moc_predefs.h \
+		/usr/bin/moc
+	/usr/bin/moc $(DEFINES) --include /home/itszariep/papirus-folders-gui/papirus-folders-gui/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/itszariep/papirus-folders-gui/papirus-folders-gui -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I/usr/include/c++/10.2.0 -I/usr/include/c++/10.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/10.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed -I/usr/include polkit.h -o moc_polkit.cpp
 
 moc_secdialog.cpp: secdialog.h \
 		moc_predefs.h \
 		/usr/bin/moc
-	/usr/bin/moc $(DEFINES) --include '/home/itszariep/Documents/documents/papirus-folders-gui (copy)/moc_predefs.h' -I/usr/lib/qt/mkspecs/linux-g++ -I'/home/itszariep/Documents/documents/papirus-folders-gui (copy)' -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I/usr/include/c++/10.2.0 -I/usr/include/c++/10.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/10.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed -I/usr/include secdialog.h -o moc_secdialog.cpp
+	/usr/bin/moc $(DEFINES) --include /home/itszariep/papirus-folders-gui/papirus-folders-gui/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/itszariep/papirus-folders-gui/papirus-folders-gui -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I/usr/include/c++/10.2.0 -I/usr/include/c++/10.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/10.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed -I/usr/include secdialog.h -o moc_secdialog.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_changelog.h ui_colors.h ui_help.h ui_license.h ui_mainwindow.h ui_secdialog.h
+compiler_uic_make_all: ui_changelog.h ui_colors.h ui_extra.h ui_help.h ui_license.h ui_mainwindow.h ui_papirus.h ui_polkit.h ui_secdialog.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_changelog.h ui_colors.h ui_help.h ui_license.h ui_mainwindow.h ui_secdialog.h
+	-$(DEL_FILE) ui_changelog.h ui_colors.h ui_extra.h ui_help.h ui_license.h ui_mainwindow.h ui_papirus.h ui_polkit.h ui_secdialog.h
 ui_changelog.h: changelog.ui \
 		/usr/bin/uic
 	/usr/bin/uic changelog.ui -o ui_changelog.h
@@ -935,6 +1046,10 @@ ui_changelog.h: changelog.ui \
 ui_colors.h: colors.ui \
 		/usr/bin/uic
 	/usr/bin/uic colors.ui -o ui_colors.h
+
+ui_extra.h: extra.ui \
+		/usr/bin/uic
+	/usr/bin/uic extra.ui -o ui_extra.h
 
 ui_help.h: help.ui \
 		/usr/bin/uic
@@ -947,6 +1062,14 @@ ui_license.h: license.ui \
 ui_mainwindow.h: mainwindow.ui \
 		/usr/bin/uic
 	/usr/bin/uic mainwindow.ui -o ui_mainwindow.h
+
+ui_papirus.h: papirus.ui \
+		/usr/bin/uic
+	/usr/bin/uic papirus.ui -o ui_papirus.h
+
+ui_polkit.h: polkit.ui \
+		/usr/bin/uic
+	/usr/bin/uic polkit.ui -o ui_polkit.h
 
 ui_secdialog.h: secdialog.ui \
 		/usr/bin/uic
@@ -973,6 +1096,13 @@ colors.o: colors.cpp colors.h \
 		ui_colors.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o colors.o colors.cpp
 
+extra.o: extra.cpp extra.h \
+		ui_extra.h \
+		colors.h \
+		papirus.h \
+		polkit.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o extra.o extra.cpp
+
 help.o: help.cpp help.h \
 		ui_help.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o help.o help.cpp
@@ -988,8 +1118,17 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		ui_mainwindow.h \
 		secdialog.h \
 		colors.h \
-		help.h
+		help.h \
+		extra.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
+
+papirus.o: papirus.cpp papirus.h \
+		ui_papirus.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o papirus.o papirus.cpp
+
+polkit.o: polkit.cpp polkit.h \
+		ui_polkit.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o polkit.o polkit.cpp
 
 secdialog.o: secdialog.cpp secdialog.h \
 		ui_secdialog.h \
@@ -998,14 +1137,17 @@ secdialog.o: secdialog.cpp secdialog.h \
 		changelog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o secdialog.o secdialog.cpp
 
-qrc_traducciones.o: qrc_traducciones.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_traducciones.o qrc_traducciones.cpp
+qrc_img.o: qrc_img.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_img.o qrc_img.cpp
 
 moc_changelog.o: moc_changelog.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_changelog.o moc_changelog.cpp
 
 moc_colors.o: moc_colors.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_colors.o moc_colors.cpp
+
+moc_extra.o: moc_extra.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_extra.o moc_extra.cpp
 
 moc_help.o: moc_help.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_help.o moc_help.cpp
@@ -1016,6 +1158,12 @@ moc_license.o: moc_license.cpp
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
 
+moc_papirus.o: moc_papirus.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_papirus.o moc_papirus.cpp
+
+moc_polkit.o: moc_polkit.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_polkit.o moc_polkit.cpp
+
 moc_secdialog.o: moc_secdialog.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_secdialog.o moc_secdialog.cpp
 
@@ -1024,7 +1172,6 @@ moc_secdialog.o: moc_secdialog.cpp
 install_target: first FORCE
 	@test -d $(INSTALL_ROOT)/opt/papirus-folders-GUI/bin || mkdir -p $(INSTALL_ROOT)/opt/papirus-folders-GUI/bin
 	$(QINSTALL_PROGRAM) $(QMAKE_TARGET) $(INSTALL_ROOT)/opt/papirus-folders-GUI/bin/$(QMAKE_TARGET)
-	-$(STRIP) $(INSTALL_ROOT)/opt/papirus-folders-GUI/bin/$(QMAKE_TARGET)
 
 uninstall_target: FORCE
 	-$(DEL_FILE) $(INSTALL_ROOT)/opt/papirus-folders-GUI/bin/$(QMAKE_TARGET)

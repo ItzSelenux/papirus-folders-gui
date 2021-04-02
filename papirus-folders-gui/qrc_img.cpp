@@ -10492,8 +10492,8 @@ bool qUnregisterResourceData(int, const unsigned char *, const unsigned char *, 
 }
 #endif
 
-int QT_RCC_MANGLE_NAMESPACE(qInitResources_traducciones)();
-int QT_RCC_MANGLE_NAMESPACE(qInitResources_traducciones)()
+int QT_RCC_MANGLE_NAMESPACE(qInitResources_img)();
+int QT_RCC_MANGLE_NAMESPACE(qInitResources_img)()
 {
     int version = 3;
     QT_RCC_PREPEND_NAMESPACE(qRegisterResourceData)
@@ -10501,8 +10501,8 @@ int QT_RCC_MANGLE_NAMESPACE(qInitResources_traducciones)()
     return 1;
 }
 
-int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_traducciones)();
-int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_traducciones)()
+int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_img)();
+int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_img)()
 {
     int version = 3;
     QT_RCC_PREPEND_NAMESPACE(qUnregisterResourceData)
@@ -10512,7 +10512,7 @@ int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_traducciones)()
 
 namespace {
    struct initializer {
-       initializer() { QT_RCC_MANGLE_NAMESPACE(qInitResources_traducciones)(); }
-       ~initializer() { QT_RCC_MANGLE_NAMESPACE(qCleanupResources_traducciones)(); }
+       initializer() { QT_RCC_MANGLE_NAMESPACE(qInitResources_img)(); }
+       ~initializer() { QT_RCC_MANGLE_NAMESPACE(qCleanupResources_img)(); }
    } dummy;
 }

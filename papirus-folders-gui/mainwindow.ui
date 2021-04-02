@@ -12,8 +12,8 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>100</width>
-    <height>100</height>
+    <width>360</width>
+    <height>300</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -36,13 +36,6 @@
      <widget class="QPushButton" name="blue">
       <property name="text">
        <string>Blue</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="2" colspan="2">
-     <widget class="QPushButton" name="pushButton">
-      <property name="text">
-       <string>About</string>
       </property>
      </widget>
     </item>
@@ -85,20 +78,6 @@
      <widget class="QPushButton" name="green">
       <property name="text">
        <string>Green</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="2">
-     <widget class="QPushButton" name="dark">
-      <property name="text">
-       <string>Dark theme</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="3">
-     <widget class="QPushButton" name="light">
-      <property name="text">
-       <string>Light theme</string>
       </property>
      </widget>
     </item>
@@ -210,24 +189,38 @@
       </property>
      </widget>
     </item>
-    <item row="1" column="2" colspan="2">
-     <widget class="QPushButton" name="previewc">
+    <item row="5" column="2" colspan="2">
+     <widget class="QPushButton" name="exit">
       <property name="text">
-       <string>Colors preview</string>
+       <string>Exit</string>
       </property>
      </widget>
     </item>
-    <item row="2" column="2" colspan="2">
+    <item row="0" column="2" colspan="2">
      <widget class="QPushButton" name="pushButton_2">
       <property name="text">
        <string>Help</string>
       </property>
      </widget>
     </item>
-    <item row="5" column="2" colspan="2">
-     <widget class="QPushButton" name="exit">
+    <item row="1" column="2" colspan="2">
+     <widget class="QPushButton" name="pushButton">
       <property name="text">
-       <string>Exit</string>
+       <string>About</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2" colspan="2">
+     <widget class="QPushButton" name="previewc">
+      <property name="text">
+       <string>Colors preview</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2" colspan="2">
+     <widget class="QPushButton" name="extra">
+      <property name="text">
+       <string>Extra</string>
       </property>
      </widget>
     </item>
@@ -239,7 +232,7 @@
      <x>0</x>
      <y>0</y>
      <width>391</width>
-     <height>25</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>

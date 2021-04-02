@@ -29,15 +29,12 @@ public:
     QGridLayout *gridLayout;
     QPushButton *black;
     QPushButton *blue;
-    QPushButton *pushButton;
     QPushButton *bluegrey;
     QPushButton *breeze;
     QPushButton *brown;
     QPushButton *cyan;
     QPushButton *deeporange;
     QPushButton *green;
-    QPushButton *dark;
-    QPushButton *light;
     QPushButton *grey;
     QPushButton *indigo;
     QPushButton *revert;
@@ -53,9 +50,11 @@ public:
     QPushButton *white;
     QPushButton *yaru;
     QPushButton *yellow;
-    QPushButton *previewc;
-    QPushButton *pushButton_2;
     QPushButton *exit;
+    QPushButton *pushButton_2;
+    QPushButton *pushButton;
+    QPushButton *previewc;
+    QPushButton *extra;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -64,7 +63,7 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(391, 392);
-        MainWindow->setMinimumSize(QSize(100, 100));
+        MainWindow->setMinimumSize(QSize(360, 300));
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/colors.png"), QSize(), QIcon::Normal, QIcon::Off);
         MainWindow->setWindowIcon(icon);
@@ -81,11 +80,6 @@ public:
         blue->setObjectName(QString::fromUtf8("blue"));
 
         gridLayout->addWidget(blue, 0, 1, 1, 1);
-
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-
-        gridLayout->addWidget(pushButton, 0, 2, 1, 2);
 
         bluegrey = new QPushButton(centralwidget);
         bluegrey->setObjectName(QString::fromUtf8("bluegrey"));
@@ -116,16 +110,6 @@ public:
         green->setObjectName(QString::fromUtf8("green"));
 
         gridLayout->addWidget(green, 3, 1, 1, 1);
-
-        dark = new QPushButton(centralwidget);
-        dark->setObjectName(QString::fromUtf8("dark"));
-
-        gridLayout->addWidget(dark, 3, 2, 1, 1);
-
-        light = new QPushButton(centralwidget);
-        light->setObjectName(QString::fromUtf8("light"));
-
-        gridLayout->addWidget(light, 3, 3, 1, 1);
 
         grey = new QPushButton(centralwidget);
         grey->setObjectName(QString::fromUtf8("grey"));
@@ -203,25 +187,35 @@ public:
 
         gridLayout->addWidget(yellow, 10, 1, 1, 1);
 
-        previewc = new QPushButton(centralwidget);
-        previewc->setObjectName(QString::fromUtf8("previewc"));
-
-        gridLayout->addWidget(previewc, 1, 2, 1, 2);
-
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-
-        gridLayout->addWidget(pushButton_2, 2, 2, 1, 2);
-
         exit = new QPushButton(centralwidget);
         exit->setObjectName(QString::fromUtf8("exit"));
 
         gridLayout->addWidget(exit, 5, 2, 1, 2);
 
+        pushButton_2 = new QPushButton(centralwidget);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+
+        gridLayout->addWidget(pushButton_2, 0, 2, 1, 2);
+
+        pushButton = new QPushButton(centralwidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+
+        gridLayout->addWidget(pushButton, 1, 2, 1, 2);
+
+        previewc = new QPushButton(centralwidget);
+        previewc->setObjectName(QString::fromUtf8("previewc"));
+
+        gridLayout->addWidget(previewc, 2, 2, 1, 2);
+
+        extra = new QPushButton(centralwidget);
+        extra->setObjectName(QString::fromUtf8("extra"));
+
+        gridLayout->addWidget(extra, 3, 2, 1, 2);
+
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 391, 25));
+        menubar->setGeometry(QRect(0, 0, 391, 23));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -237,15 +231,12 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Change the papirus folder color", nullptr));
         black->setText(QCoreApplication::translate("MainWindow", "Black", nullptr));
         blue->setText(QCoreApplication::translate("MainWindow", "Blue", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "About", nullptr));
         bluegrey->setText(QCoreApplication::translate("MainWindow", "Blue Grey", nullptr));
         breeze->setText(QCoreApplication::translate("MainWindow", "Breeze", nullptr));
         brown->setText(QCoreApplication::translate("MainWindow", "Brown", nullptr));
         cyan->setText(QCoreApplication::translate("MainWindow", "Cyan", nullptr));
         deeporange->setText(QCoreApplication::translate("MainWindow", "Deep Orange", nullptr));
         green->setText(QCoreApplication::translate("MainWindow", "Green", nullptr));
-        dark->setText(QCoreApplication::translate("MainWindow", "Dark theme", nullptr));
-        light->setText(QCoreApplication::translate("MainWindow", "Light theme", nullptr));
         grey->setText(QCoreApplication::translate("MainWindow", "Grey", nullptr));
         indigo->setText(QCoreApplication::translate("MainWindow", "Indigo", nullptr));
         revert->setText(QCoreApplication::translate("MainWindow", "Revert to default", nullptr));
@@ -261,9 +252,11 @@ public:
         white->setText(QCoreApplication::translate("MainWindow", "White", nullptr));
         yaru->setText(QCoreApplication::translate("MainWindow", "Yaru", nullptr));
         yellow->setText(QCoreApplication::translate("MainWindow", "Yellow", nullptr));
-        previewc->setText(QCoreApplication::translate("MainWindow", "Colors preview", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "Help", nullptr));
         exit->setText(QCoreApplication::translate("MainWindow", "Exit", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("MainWindow", "Help", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "About", nullptr));
+        previewc->setText(QCoreApplication::translate("MainWindow", "Colors preview", nullptr));
+        extra->setText(QCoreApplication::translate("MainWindow", "Extra", nullptr));
     } // retranslateUi
 
 };

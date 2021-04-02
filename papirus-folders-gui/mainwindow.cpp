@@ -4,6 +4,7 @@
 #include "colors.h"
 #include "help.h"
 #include <QTranslator>
+#include "extra.h"
 #include <QInputDialog>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -173,3 +174,10 @@ void MainWindow::on_exit_clicked()
     close();
 }
 //end
+
+void MainWindow::on_extra_clicked()
+{
+    extra extra;
+    extra.setModal(true);
+    extra.exec();
+}

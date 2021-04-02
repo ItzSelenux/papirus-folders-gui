@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/">
+        <file>black.png</file>
+        <file>blue.png</file>
+        <file>bluegrey.png</file>
+        <file>breeze.png</file>
+        <file>brown.png</file>
+        <file>colors.png</file>
+        <file>cyan.png</file>
+        <file>deeporange.png</file>
+        <file>folder-green.png</file>
+        <file>green.png</file>
+        <file>grey.png</file>
+        <file>indigo.png</file>
+        <file>magenta.png</file>
+        <file>nordic.png</file>
+        <file>orange.png</file>
+        <file>palebrown.png</file>
+        <file>paleorange.png</file>
+        <file>pink.png</file>
+        <file>violet.png</file>
+        <file>white.png</file>
+        <file>yaru.png</file>
+        <file>yellow.png</file>
+        <file>red.png</file>
+        <file>teal.png</file>
+    </qresource>
+</RCC>

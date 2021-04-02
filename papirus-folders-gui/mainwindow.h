@@ -75,6 +75,8 @@ private slots:
 
     void on_exit_clicked();
 
+    void on_extra_clicked();
+
 private:
     Ui::MainWindow *ui;
     QProcess *folder;

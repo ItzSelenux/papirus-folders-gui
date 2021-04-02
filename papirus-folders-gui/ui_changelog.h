@@ -10,6 +10,7 @@
 #define UI_CHANGELOG_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
@@ -33,7 +34,11 @@ public:
     {
         if (changelog->objectName().isEmpty())
             changelog->setObjectName(QString::fromUtf8("changelog"));
-        changelog->resize(400, 300);
+        changelog->resize(360, 260);
+        changelog->setMinimumSize(QSize(360, 260));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/colors.png"), QSize(), QIcon::Normal, QIcon::Off);
+        changelog->setWindowIcon(icon);
         gridLayout = new QGridLayout(changelog);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         label = new QLabel(changelog);
@@ -69,14 +74,16 @@ public:
 
     void retranslateUi(QWidget *changelog)
     {
-        changelog->setWindowTitle(QCoreApplication::translate("changelog", "Form", nullptr));
+        changelog->setWindowTitle(QCoreApplication::translate("changelog", "Changelog", nullptr));
         label->setText(QCoreApplication::translate("changelog", "Changelog", nullptr));
         textBrowser->setHtml(QCoreApplication::translate("changelog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Cantarell'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">22/11/2020 - 1.0. Release</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">08/01/2021 - 1.1. &quot;zensu&quot; command was changed to the &quot;pkexec&quot; command for a better functionality</p></body></html>", nullptr));
+"</style></head><body style=\" font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Cantarell';\">22/11/2020 - 1.0.  Release.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Cantarell';\">08/01/2021 - 1.1.  &quot;zensu&quot; command was changed to the &quot;pkexec&quot; command for a better functionality.</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Cantarell';\">02/04/2021 - 1.2. Bug cor"
+                        "rection and &quot;Extra&quot; section was added.</span></p></body></html>", nullptr));
         help->setText(QCoreApplication::translate("changelog", "Help", nullptr));
         license->setText(QCoreApplication::translate("changelog", "License", nullptr));
         close->setText(QCoreApplication::translate("changelog", "Close window", nullptr));
