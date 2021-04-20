@@ -8,4 +8,5 @@ Created with Qt Creator
 Extra packages required:
 
 papirus-folders
-pkexecs
+polkit-gnome
+qt5-base
