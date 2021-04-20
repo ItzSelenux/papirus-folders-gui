@@ -2,8 +2,8 @@
 Type=Application
 Icon=folder
 Name=Papirus folders GUI
+Exec=/opt/papirus-folders-gui/bin/papirus-folders-gui
 Terminal=false
 Hidden=false
-Categories=System; Utility
+Categories=System
 Comment=Change the folders color of the Papirus icon theme
-Exec=/bin/papirus-folders-gui
