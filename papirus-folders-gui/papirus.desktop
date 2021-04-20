@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Icon=folder
+Name=Papirus folders GUI
+Terminal=false
+Hidden=false
+Categories=System; Utility
+Comment=Change the folders color of the Papirus icon theme
+Exec=/bin/papirus-folders-gui
