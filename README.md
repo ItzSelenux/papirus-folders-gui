@@ -39,10 +39,10 @@ git clone https://github.com/ItzSelenux/papirus-folders-gui
   make
   ```
   ### Download and compile
-    you can download the code and compile with next steps
+   you can download the code and compile with next steps
     
-    First Download the code as zip and and unzip the zip
-    then open a terminal in the source folder an run make
+   First Download the code as zip and and unzip the zip
+   then open a terminal in the source folder an run make
   ### Premaked build
    you can download a premaked build (papirus-folders-gui) and run!
     
@@ -56,14 +56,14 @@ git clone https://github.com/ItzSelenux/papirus-folders-gui
    if you press the button "Restore to default" the color of folders was restore to initial papirus color
    
   ## Kill File manager
-    if you want to kill the file manager to see the changes, you can use the "Kill File manager" button
-    actually this file managers was supported:
-    Caja (Mate file manager)
-    Dolphin (Plasma file manager)
-    Nautilus (Gnome file manager)
-    Nemo (Cinnamon file manager)
-    PCmanFM (Lxde file manager)
-    SpaceFM (independent)
-    Thunar (Xfce file manager)
+   if you want to kill the file manager to see the changes, you can use the "Kill File manager" button
+   actually this file managers was supported:
+   Caja (Mate file manager)
+   Dolphin (Plasma file manager)
+   Nautilus (Gnome file manager)
+   Nemo (Cinnamon file manager)
+   PCmanFM (Lxde file manager)
+   SpaceFM (independent)
+   Thunar (Xfce file manager)
 
-    Note: If your desktop disappeared, please logout and re-login to fix the problem
+   Note: If your desktop disappeared, please logout and re-login to fix the problem
