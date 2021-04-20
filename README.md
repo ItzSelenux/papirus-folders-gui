@@ -17,6 +17,7 @@ for this program to work it is necessary that you have installed pkexec on your 
 - [Usage](#usage)
     - [Color Change](#color-change)
     - [Colors preview](#colors-preview)
+    - [Kill File manager](#kill-file-manager)
 
 ## papirus-folder installation
  You can download papirus folder on <a href=”url”>https://github.com/PapirusDevelopmentTeam/papirus-folders</a>
@@ -53,3 +54,16 @@ git clone https://github.com/ItzSelenux/papirus-folders-gui
    if you press the button "Colors preview" you will see a list with the images of all the colors applied in the folder
    
    if you press the button "Restore to default" the color of folders was restore to initial papirus color
+   
+  ## Kill File manager
+    if you want to kill the file manager to see the changes, you can use the "Kill File manager" button
+    actually this file managers was supported:
+    Caja (Mate file manager)
+    Dolphin (Plasma file manager)
+    Nautilus (Gnome file manager)
+    Nemo (Cinnamon file manager)
+    PCmanFM (Lxde file manager)
+    SpaceFM (independent)
+    Thunar (Xfce file manager)
+
+    Note: If your desktop disappeared, please logout and re-login to fix the problem
