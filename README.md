@@ -58,12 +58,12 @@ git clone https://github.com/ItzSelenux/papirus-folders-gui
   ## Kill File manager
    if you want to kill the file manager to see the changes, you can use the "Kill File manager" button
    actually this file managers was supported:
-   Caja (Mate file manager)
-   Dolphin (Plasma file manager)
-   Nautilus (Gnome file manager)
-   Nemo (Cinnamon file manager)
-   PCmanFM (Lxde file manager)
-   SpaceFM (independent)
-   Thunar (Xfce file manager)
+   - Caja (Mate file manager)
+   - Dolphin (Plasma file manager)
+   - Nautilus (Gnome file manager)
+   - Nemo (Cinnamon file manager)
+   - PCmanFM (Lxde file manager)
+   - SpaceFM (independent)
+   - Thunar (Xfce file manager)
 
    Note: If your desktop disappeared, please logout and re-login to fix the problem
