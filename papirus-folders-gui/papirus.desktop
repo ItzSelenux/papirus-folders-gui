@@ -2,7 +2,7 @@
 Type=Application
 Icon=folder
 Name=Papirus folders GUI
-Exec=/opt/papirus-folders-gui/bin/papirus-folders-gui
+Exec=/usr/bin/papirus-folders-gui
 Terminal=false
 Hidden=false
 Categories=System
