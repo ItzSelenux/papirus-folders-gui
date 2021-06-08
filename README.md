@@ -9,6 +9,7 @@ for this program to work it is necessary that you have installed pkexec on your 
 
 ## Table of contents
 
+- [dependencies](#dependencies)
 - [papirus-folder installation](#papirus-folder-installation)
 - [Installation](#installation)
     - [Git clone]( #git-clone)
@@ -19,6 +20,13 @@ for this program to work it is necessary that you have installed pkexec on your 
     - [Colors preview](#colors-preview)
     - [Kill File manager](#kill-file-manager)
 
+## dependencies
+  These dependencies correspond to Arch Linux, in other operating systems the dependencies may have another name
+   -> qt5-base
+   -> polkit-gnome( one is already included in most desktop environments, but no in most window manager)
+   -> papirus-folders
+
+AUR site for more info: <a href=”url”>https://aur.archlinux.org/packages/papirus-folders-gui/</a>
 ## papirus-folder installation
  You can download papirus folder on <a href=”url”>https://github.com/PapirusDevelopmentTeam/papirus-folders</a>
  
