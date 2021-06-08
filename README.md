@@ -22,11 +22,13 @@ for this program to work it is necessary that you have installed pkexec on your 
 
 ## dependencies
   These dependencies correspond to Arch Linux, in other operating systems the dependencies may have another name
-   -> qt5-base
-   -> polkit-gnome( one is already included in most desktop environments, but no in most window manager)
-   -> papirus-folders
+     - qt5-base
 
-AUR site for more info: <a href=”url”>https://aur.archlinux.org/packages/papirus-folders-gui/</a>
+     - polkit-gnome( one is already included in most desktop environments, but no in most window manager)
+
+     - papirus-folders
+
+   AUR site for more info: <a href=”url”>https://aur.archlinux.org/packages/papirus-folders-gui/</a>
 ## papirus-folder installation
  You can download papirus folder on <a href=”url”>https://github.com/PapirusDevelopmentTeam/papirus-folders</a>
  
