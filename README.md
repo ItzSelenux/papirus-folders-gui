@@ -60,11 +60,7 @@ git clone https://github.com/ItzSelenux/papirus-folders-gui
  ## Usage
   ### Color change
   Select a color from the list, when you do, a window will appear where you will have to put your Root password, when you have entered the password, 
-  restart your file explorer (it is recommended to kill the process with the task manager), and you will see your folders from the color you selected
-  ## Colors preview
-   if you press the button "Colors preview" you will see a list with the images of all the colors applied in the folder
-   
-   if you press the button "Restore to default" the color of folders was restore to initial papirus color
+  restart your file explorer (you can use "Kill File Manager" button), and you will see your folders from the color you selected
    
   ## Kill File manager
    if you want to kill the file manager to see the changes, you can use the "Kill File manager" button
