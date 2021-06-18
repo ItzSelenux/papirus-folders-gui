@@ -1,23 +1,18 @@
 # papirus-folders-gui
 papirus-folders-gui is a graphical user interface for papirus-folders, this program change the folders color of Papirus
 
-Notes: This project doesn't provide any folder icons
-
-for this program to work it is necessary that you have installed papirus-folders-gui on your PC
-
-for this program to work it is necessary that you have installed pkexec on your PC
-
+Note: This project doesn't provide any folder icons
 ## Table of contents
 
-- [dependencies](#dependencies)
+- [Dependencies](#dependencies)
 - [papirus-folder installation](#papirus-folder-installation)
 - [Installation](#installation)
     - [Git clone]( #git-clone)
     - [download and compile](#download-and-compile)
     - [premaked builds](#premaked-build)
+    - [AUR](#aur)
 - [Usage](#usage)
     - [Color Change](#color-change)
-    - [Colors preview](#colors-preview)
     - [Kill File manager](#kill-file-manager)
 
 ## dependencies
@@ -31,7 +26,7 @@ for this program to work it is necessary that you have installed pkexec on your 
 
    AUR site for more info: <a href=”url”>https://aur.archlinux.org/packages/papirus-folders-gui/</a>
 ## papirus-folder installation
- You can download papirus folder on <a href=”url”>https://github.com/PapirusDevelopmentTeam/papirus-folders</a>
+ You can download papirus folder on <a href=”url”>https://github.com/PapirusDevelopmentTeam/papirus-folders#installation</a>
  
  ## installation
    ### Git clone
@@ -56,6 +51,8 @@ git clone https://github.com/ItzSelenux/papirus-folders-gui
    then open a terminal in the source folder an run make
   ### Premaked build
    you can download a premaked build (papirus-folders-gui) and run!
+   ### AUR
+  if you are an Arch Linux (or derived) user, you can install Papirus folders GUI from the AUR, you need an AUR helper just like Paru, Yay, Pamac, Etc
     
  ## Usage
   ### Color change
