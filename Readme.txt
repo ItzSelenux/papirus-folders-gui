@@ -6,6 +6,7 @@ Extra packages required:
 papirus-folders
 polkit-gnome
 qt5-base
+cmake
 
 Credits:
 Selenux Software 2021
