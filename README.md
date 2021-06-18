@@ -45,6 +45,8 @@ git clone https://github.com/ItzSelenux/papirus-folders-gui
   run the following commands
   ```
   cmake .
+  ```
+  ```
   make
   ```
   ### Download and compile
