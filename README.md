@@ -19,6 +19,8 @@ Note: This project doesn't provide any folder icons
   These dependencies correspond to Arch Linux, in other operating systems the dependencies may have another name
      
    - qt5-base
+   
+   - cmake 
 
    - polkit-gnome( one is already included in most desktop environments, but no in most window manager)
 
