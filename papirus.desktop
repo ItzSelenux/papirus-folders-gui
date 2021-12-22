@@ -1,0 +1,8 @@
+[Desktop Entry]
+Exec=papirus-folders-gui
+Icon=papirus-folders-gui
+Type=Application
+Name=papirus-folders GUI
+Comment=GUI Tool for papirus-folders
+Categories=Qt;Settings;
+StartupWMClass=papirus-folders-gui

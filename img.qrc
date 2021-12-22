@@ -1,0 +1,39 @@
+<RCC>
+    <qresource prefix="/">
+        <file>folder-previews/black.png</file>
+        <file>folder-previews/blue.png</file>
+        <file>folder-previews/bluegrey.png</file>
+        <file>folder-previews/breeze.png</file>
+        <file>folder-previews/brown.png</file>
+        <file>folder-previews/cyan.png</file>
+        <file>folder-previews/deeporange.png</file>
+        <file>folder-previews/green.png</file>
+        <file>folder-previews/grey.png</file>
+        <file>folder-previews/indigo.png</file>
+        <file>folder-previews/magenta.png</file>
+        <file>folder-previews/nordic.png</file>
+        <file>folder-previews/orange.png</file>
+        <file>folder-previews/palebrown.png</file>
+        <file>folder-previews/paleorange.png</file>
+        <file>folder-previews/pink.png</file>
+        <file>folder-previews/red.png</file>
+        <file>folder-previews/teal.png</file>
+        <file>folder-previews/violet.png</file>
+        <file>folder-previews/white.png</file>
+        <file>folder-previews/yaru.png</file>
+        <file>folder-previews/yellow.png</file>
+        <file>distributor-logo/Arch.png</file>
+        <file>distributor-logo/tux.png</file>
+        <file>distributor-logo/Ubuntu.png</file>
+        <file>folder-logo.svg</file>
+        <file>folder-previews/carmine.png</file>
+        <file>res/about.svg</file>
+        <file>res/default.svg</file>
+        <file>res/help-browser.svg</file>
+        <file>res/polkit.svg</file>
+        <file>res/system-file-manager.svg</file>
+        <file>res/extra.svg</file>
+        <file>res/pirate.png</file>
+        <file>folder-previews/dark-cyan.png</file>
+    </qresource>
+</RCC>

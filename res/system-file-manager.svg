@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="65.6" version="1" xmlns="http://www.w3.org/2000/svg">
+ <rect x="9.6" width="44.8" height="38.4" rx="2.4" ry="2.4" fill="#5294e2" stroke-width="1.6"/>
+ <rect x="6.4" y="6.4" width="51.2" height="38.4" rx="2.4" ry="2.4" fill="#89e058" stroke-width="1.6"/>
+ <rect x="3.2" y="12.8" width="57.6" height="38.4" rx="2.4" ry="2.4" fill="#ffcd54" stroke-width="1.6"/>
+ <rect y="20.8" width="64" height="44.8" rx="3.2" ry="3.2" opacity=".2" stroke-width="1.6"/>
+ <rect y="19.2" width="64" height="44.8" rx="3.2" ry="3.2" fill="#8e8e8e" stroke-width="1.6"/>
+ <rect x="20.8" y="38.4" width="22.4" height="6.4" rx="1.6" ry="1.6" opacity=".2" stroke-width="1.6"/>
+ <rect x="20.8" y="36.8" width="22.4" height="6.4" rx="1.6" ry="1.6" fill="#ececec" stroke-width="1.6"/>
+ <path d="m12 0c-1.33 0-2.4 1.07-2.4 2.4v1.6c0-1.33 1.07-2.4 2.4-2.4h40c1.33 0 2.4 1.07 2.4 2.4v-1.6c0-1.33-1.07-2.4-2.4-2.4z" fill="#fff" opacity=".1" stroke-width="1.6"/>
+ <path d="m8.8 6.4c-1.33 0-2.4 1.07-2.4 2.4v1.6c0-1.33 1.07-2.4 2.4-2.4h46.4c1.33 0 2.4 1.07 2.4 2.4v-1.6c0-1.33-1.07-2.4-2.4-2.4z" fill="#fff" opacity=".1" stroke-width="1.6"/>
+ <path d="m5.6 12.8c-1.33 0-2.4 1.07-2.4 2.4v1.6c0-1.33 1.07-2.4 2.4-2.4h52.8c1.33 0 2.4 1.07 2.4 2.4v-1.6c0-1.33-1.07-2.4-2.4-2.4z" fill="#fff" opacity=".1" stroke-width="1.6"/>
+ <path d="m8.8 4.8c-1.33 0-2.4 1.07-2.4 2.4v1.6c0-1.33 1.07-2.4 2.4-2.4h46.4c1.33 0 2.4 1.07 2.4 2.4v-1.6c0-1.33-1.07-2.4-2.4-2.4z" opacity=".1" stroke-width="1.6"/>
+ <path d="m5.6 11.2c-1.33 0-2.4 1.07-2.4 2.4v1.6c0-1.33 1.07-2.4 2.4-2.4h52.8c1.33 0 2.4 1.07 2.4 2.4v-1.6c0-1.33-1.07-2.4-2.4-2.4z" opacity=".1" stroke-width="1.6"/>
+</svg>
