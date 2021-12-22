@@ -40,7 +40,7 @@ git clone https://github.com/ItzSelenux/papirus-folders-gui
 ```
   then go to the code folder
   ```
-  cd ./papirus-folders-gui/papirus-folders-gui
+  cd ./papirus-folders-gui
   ```
   run the following commands
   ```
